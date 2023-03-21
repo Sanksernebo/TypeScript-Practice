@@ -3,6 +3,7 @@ import stringsController from "./controllers/strings";
 import productController from "./controllers/products";
 import productsController from "./controllers/productlist";
 import parcelmachines from "./controllers/parcelmachines";
+import nordPoolPrice from "./controllers/nord-pool-price";
 import cors from "cors";
 
 const app: Express = express();
@@ -13,6 +14,7 @@ app.use(cors({
 app.get('/', (req: Request, res: Response) => {
     res.send('Express + TypeScript Server');
 });
+app.use("/", nordPoolPrice)
 app.use("/", parcelmachines)
 app.use("/", productController);
 app.use('/', stringsController);
