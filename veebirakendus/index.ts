@@ -5,6 +5,7 @@ import productsController from "./controllers/productlist";
 import parcelmachines from "./controllers/parcelmachines";
 import nordPoolPrice from "./controllers/nord-pool-price";
 import cors from "cors";
+import axios from "axios";
 
 const app: Express = express();
 
