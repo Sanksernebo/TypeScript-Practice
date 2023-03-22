@@ -6,7 +6,7 @@ import parcelmachines from "./controllers/parcelmachines";
 import nordPoolPrice from "./controllers/nord-pool-price";
 import cors from "cors";
 import axios from "axios";
-
+import makse from "./controllers/makse";
 const app: Express = express();
 
 app.use(cors({
@@ -15,6 +15,7 @@ app.use(cors({
 app.get('/', (req: Request, res: Response) => {
     res.send('Express + TypeScript Server');
 });
+app.use("/", makse)
 app.use("/", nordPoolPrice)
 app.use("/", parcelmachines)
 app.use("/", productController);
